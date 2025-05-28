@@ -9,7 +9,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4">Mopps</h3>
+            <div className="flex items-center mb-4">
+              <img src="/public/favicon.svg" alt="Mopps Logo" className="h-10 mr-2" />
+            </div>
             <p className="mb-4 text-mopps-light">
               Professional cleaning services for hospitality, commercial, and domestic spaces. We bring excellence to every corner.
             </p>
@@ -44,15 +46,15 @@ const Footer: React.FC = () => {
             <div className="flex flex-col space-y-3 mb-6">
               <div className="flex items-start">
                 <MapPin size={20} className="mr-2 text-mopps-sky flex-shrink-0 mt-1" />
-                <p className="text-mopps-light">123 Cleaning Avenue, Suite 500, New York, NY 10001</p>
+                <p className="text-mopps-light">Portsmouth, Cosham, Fareham, Southampton, Bournemouth and more...</p>
               </div>
               <div className="flex items-center">
                 <Phone size={20} className="mr-2 text-mopps-sky flex-shrink-0" />
-                <p className="text-mopps-light">(555) 123-4567</p>
+                <p className="text-mopps-light">+44 735 4290 058</p>
               </div>
               <div className="flex items-center">
                 <Mail size={20} className="mr-2 text-mopps-sky flex-shrink-0" />
-                <p className="text-mopps-light">info@mopps.com</p>
+                <p className="text-mopps-light">info@mopps.co.uk</p>
               </div>
             </div>
             

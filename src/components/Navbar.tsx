@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -25,22 +25,28 @@ const Navbar: React.FC = () => {
   }, [location]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <header 
+    <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-mopps-navy shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? "bg-mopps-navy shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <span className="text-white font-bold text-2xl">Mopps</span>
+            <div className="flex items-center mb-4">
+              <img
+                src="/public/favicon.svg"
+                alt="Mopps Logo"
+                className="h-8 mr-2"
+              />
+            </div>{" "}
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,7 +56,9 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 className={`text-white hover:text-mopps-light transition-colors duration-300 ${
-                  location.pathname === link.path ? 'font-semibold' : 'font-normal'
+                  location.pathname === link.path
+                    ? "font-semibold"
+                    : "font-normal"
                 }`}
               >
                 {link.name}
@@ -82,7 +90,9 @@ const Navbar: React.FC = () => {
                   key={link.name}
                   to={link.path}
                   className={`text-white hover:text-mopps-light transition-colors duration-300 ${
-                    location.pathname === link.path ? 'font-semibold' : 'font-normal'
+                    location.pathname === link.path
+                      ? "font-semibold"
+                      : "font-normal"
                   }`}
                 >
                   {link.name}
