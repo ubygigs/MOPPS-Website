@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo.svg";
+
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +44,7 @@ const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center">
             <div className="flex items-center mb-4">
               <img
-                src="/public/favicon.svg"
+                src={logo}
                 alt="Mopps Logo"
                 className="h-8 mr-2"
               />

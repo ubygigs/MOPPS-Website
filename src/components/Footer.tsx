@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
+import logo from "../../assets/logo.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <img src="/public/favicon.svg" alt="Mopps Logo" className="h-10 mr-2" />
+              <img src={logo} alt="Mopps Logo" className="h-10 mr-2" />
             </div>
             <p className="mb-4 text-mopps-light">
               Professional cleaning services for hospitality, commercial, and domestic spaces. We bring excellence to every corner.

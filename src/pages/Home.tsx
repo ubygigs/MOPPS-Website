@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button to="/quote" size="lg">Get a Free Quote</Button>
-              <Button to="/services" variant="outline" size="lg">Our Services</Button>
+              <Button to="/services" variant="outline" size="lg" className="border-white text-white">Our Services</Button>
             </div>
           </div>
         </div>
